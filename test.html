@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$('button').click(function(){
+				$(".alert_bg").fadeIn();
+			});
+			$('.btn').click(function(){
+				$('.alert_bg').fadeOut(1000);
+			})
+		});
+	</script>
+	<style>
+	html, body {
+	height:100%;
+}
+.alert_bg {
+	background-color: rgba(6, 6, 6, 0.42);
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top:0px;
+	left: 0px;
+	display: none;
+	
+}
+		.alert {
+			position: absolute;
+			background: white;
+			color:black;
+			height: 28%;
+   			width: 32%;
+   			left: 32%;
+   			top: 29%;
+   			border-radius: 12px;
+   			padding:12px;
+		}
+		.alert h1 {
+			border-bottom: 1px solid black;
+			font-family: arial;
+			color:#ea5454;
+		}
+		.alert p {
+			font-family: arial;
+			font-size: 18px;
+		}
+		.alert .btn {
+			background-color: #793131;
+			border-color:transparent;
+			border-radius: 3px;
+			font-size: 20px;
+			color:white;
+			right: 0px;
+			position: absolute;
+			bottom: 0px;
+			margin-bottom: 7px;
+			margin-right: 7px;
+			transition: 2s;
+		}
+		.alert .btn:hover {
+			border-color: red;
+			transition: 2s;
+		}
+	</style>
+</head>
+<body>
+<button >Click</button>
+<div class="alert_bg">
+	<div class="alert">
+		<h1>Alert !</h1>
+		<p>This is an working alert this alert showing by jquery 
+		fade in and out and some css for some good look</p>
+		<button class="btn">Close</button>
+	</div>
+</div>
+</body>
+</html>
